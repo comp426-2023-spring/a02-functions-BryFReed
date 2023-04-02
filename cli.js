@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const moment = require('moment-timezone');
-let timezone = moment.tz.guess()
+let timezone = moment.tz.guess();
 const minimist = require("minimist");
 const args = minimist(process.argv.slice(2))
 if('h' in args){
@@ -29,7 +29,7 @@ if('e' in args) {
     long = -args["w"];
 }
 if(!long || !lat){
-    console.log("ur missing somthing")
+    console.log("Latitude must be in range")
     process.exit(0)
 }
 if('t' in args){
