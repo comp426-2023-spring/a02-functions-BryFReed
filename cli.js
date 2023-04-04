@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 const moment = require('moment-timezone');
-let timezone = moment.tz.guess();
 const minimist = require("minimist");
-const args = minimist(process.argv.slice(2))
+const args = minimist(process.argv.slice(2));
+const timezone = args.z || moment.tz.guess();
 if('h' in args){
     console.log(`
         Usage: galosh.js [options] -[n|s] LATITUDE -[e|w] LONGITUDE -z TIME_ZONE
